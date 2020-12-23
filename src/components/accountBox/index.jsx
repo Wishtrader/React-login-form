@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const BoxContainer = styled.div`
@@ -30,14 +30,27 @@ const BackDrop = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 50%;
+  top: -290px;
+  left: -70px;
+  transform: rotate(60deg);
   background: linear-gradient(
     58deg, rgba(241,196,15,1) 20%, 
     rgba(243,172,18,1) 100%
   );
 `;
 
+const HeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Headertext = styled.div`
+  
+`;
+
 export default function AccountBox(props) {
-  return <BoxContainer>
+  return<BoxContainer>
     <TopContainer>
       <BackDrop />
     </TopContainer>
