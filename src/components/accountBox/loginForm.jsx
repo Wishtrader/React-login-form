@@ -8,9 +8,13 @@ import {
   MutedLink,
   SubmitButton,
 } from "./common";
-import { Marginer } from "../marginer"
+import { Marginer } from "../marginer";
+import { AccountContext } from './accountContext';
 
 export function LoginForm(props) {
+
+  const { switchToSignup } = useContext(AccountContext);
+
   return (
     <BoxContainer>
       <FormContainer>
@@ -24,7 +28,7 @@ export function LoginForm(props) {
       <Marginer direction="vertical" margin="5px" />
       <LineText>
         Don't have an accoun?{" "}
-        <BoldLink href="#">
+        <BoldLink onClick={switchToSignup} href="#">
           Signup
         </BoldLink>
       </LineText>
